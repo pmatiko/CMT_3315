@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<bookmark_root>
+	<folder name="Personal">
+		<folder name="Email Accounts">	   
+			<link name="Yahoo Account">
+				<url>www.yahoomail.com</url>
+				<last-visited>23-07-2011</last-visited>
+			</link>
+		</folder>
+	</folder>
+	<link name="Personal">
+			<url>www.general.com</url>
+			<last-visited>23-07-2011</last-visited>
+	</link>
+</bookmark_root>

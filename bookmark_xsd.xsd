@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="bookmark_root">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element ref="folder" maxOccurs="unbounded" minOccurs="0"/>
+			<xs:element ref="link" maxOccurs="unbounded" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	</xs:element> 
+	  
+	<xs:element name="link">      
+		<xs:complexType>       
+			<xs:sequence>        
+				<xs:element name="url" type="xs:string"/>              
+				<xs:element name="last-visited" type="xs:string"/>			
+			</xs:sequence>
+		<xs:attribute name="name" type="xs:string" use="required"/>        		
+		</xs:complexType>  
+	</xs:element>
+
+	<xs:element name="folder">    
+		<xs:complexType>
+			<xs:sequence>          
+				<xs:element ref="folder" maxOccurs="unbounded" minOccurs="0" />                
+				<xs:element ref="link" maxOccurs="unbounded" minOccurs="0" />            
+			</xs:sequence>            
+		<xs:attribute name="name" type="xs:string" use="required"/>        
+		</xs:complexType>    
+	</xs:element>
+</xs:schema>
