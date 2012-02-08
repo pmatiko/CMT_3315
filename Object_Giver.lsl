@@ -21,12 +21,8 @@ default {
         for (i=0; i<total_number; i++) {
            if (llListFindList(gAvatars,[llDetectedName(i)]) == -1) {
                add_avatar(llDetectedName(i));
-           }
-        }
-       
-        for (i=0; i<numAvs; i++) {
-           if (llDetectedName(i)==llList2String(gAvatars,0)) {
                
+            if (llDetectedName(i)==llList2String(gAvatars,0)) {  
              //llGiveInventory(llDetectedKey(i),llGetInventoryName(INVENTORY_OBJECT,0)); 
              llSay(0,llList2String(gAvatars,0)); 
             }
@@ -35,4 +31,5 @@ default {
             }
         }
     }
+}
 }
