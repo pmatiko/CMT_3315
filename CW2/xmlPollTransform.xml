@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+<xsl:template match="/">
+  <html>
+  <body>
+  <h2>XML POLL</h2>
+	<table border="0">
+		<tr>
+			<td><xsl:value-of select="poll/@name"/></td>
+		</tr><br/>
+		
+		<xsl:for-each select="poll/answer">
+			<tr>
+				<td><xsl:value-of select="@text"/></td>
+			</tr>
+		</xsl:for-each>
+	</table>
+  </body>
+  </html>
+</xsl:template>
+</xsl:stylesheet>
