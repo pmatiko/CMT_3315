@@ -5,17 +5,22 @@
   <html>
   <body>
   <h2>XML POLL</h2>
-	<table border="0">
-		<tr>
-			<td><xsl:value-of select="poll/@name"/></td>
-		</tr><br/>
-		
-		<xsl:for-each select="poll/answer">
+  
+	<form method="POST" action="">
+		<table border="0">
 			<tr>
-				<td><xsl:value-of select="@text"/></td>
-			</tr>
-		</xsl:for-each>
-	</table>
+				<td><xsl:value-of select="poll/@name"/></td>
+			</tr><br/>
+			
+			<xsl:for-each select="poll/answer">
+				<input type="radio" name="answer" value="answer"/><xsl:value-of select="@text"/>
+				<br/>
+			</xsl:for-each>
+			
+			<input type="submit" value="Submit" />
+		</table>
+	</form >
+	
   </body>
   </html>
 </xsl:template>
