@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-9" ?>
 <poll name="Which OS do you use?">
-  <answer text="Windows?">15</answer>
-  <answer text="Mac OS">5</answer>
-  <answer text="Linux">2</answer>
-  <answer text="BeOS">1</answer>
+  <answer text="Windows" id="1">15</answer>
+  <answer text="Mac OS" id="2">5</answer>
+  <answer text="Linux" id="3">2</answer>
+  <answer text="BeOS" id="4">1</answer>
 </poll>
