@@ -14,8 +14,8 @@
 			
 			<xsl:for-each select="poll/answer">
 				<xsl:variable name="id">id_<xsl:value-of select="@id"/></xsl:variable>
-				<input type="radio" name="answer" value="{id}"/>
-				<xsl:value-of select="@text"/>
+				<input type="radio" name="answer" value="{$id}"/>
+				<xsl:value-of select=""/>
 				<br/>
 			</xsl:for-each>		
 					
