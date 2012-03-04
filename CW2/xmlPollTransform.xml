@@ -13,10 +13,12 @@
 			</tr><br/>
 			
 			<xsl:for-each select="poll/answer">
-				<input type="radio" name="answer" value="answer"/><xsl:value-of select="@text"/>
+				<xsl:variable name="id">id_<xsl:value-of select="@id"/></xsl:variable>
+				<input type="radio" name="answer" value="{id}"/>
+				<xsl:value-of select="@text"/>
 				<br/>
-			</xsl:for-each>
-			
+			</xsl:for-each>		
+					
 			<input type="submit" value="Submit" />
 		</table>
 	</form >
