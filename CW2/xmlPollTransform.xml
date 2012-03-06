@@ -2,28 +2,25 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:template match="/">
-  <html>
-  <body>
-  <h2>XML POLL</h2>
-  
-	<form method="POST" action="">
-		<table border="0">
-			<tr>
-				<td><xsl:value-of select="poll/@name"/></td>
-			</tr><br/>
-			
-			<xsl:for-each select="poll/answer">
-				<xsl:variable name="id">id_<xsl:value-of select="@id"/></xsl:variable>
-				<input type="radio" name="answer" value="{$id}"/>
-				<xsl:value-of select=""/>
-				<br/>
-			</xsl:for-each>		
+
+	<h2>XML POLL</h2>
+		<form name="radioList">
+			<table border="0">
+				<tr>
+					<td><xsl:value-of select="poll/@name"/></td>
+				</tr><br/>
+				
+				<xsl:for-each select="poll/answer">
 					
-			<input type="submit" value="Submit" />
-		</table>
-	</form >
-	
-  </body>
-  </html>
+					<xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
+					<input type="radio" name="answer" value="{$id}"/>
+					<xsl:value-of select="@text"/>
+					<br/>
+					
+				</xsl:for-each>
+				<input type="button" value="Submit" onclick="getSelectedItem()"/>
+			</table>
+		</form>
+
 </xsl:template>
 </xsl:stylesheet>
